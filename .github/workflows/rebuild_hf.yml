@@ -14,10 +14,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set timezone to Europe/Istanbul
+      - name: Set timezone to Europe/Rome
         run: |
-          sudo timedatectl set-timezone Europe/Istanbul # You can change this lines according to your own time zone.
-          export TZ="Europe/Istanbul"
+          sudo timedatectl set-timezone Europe/Rome # You can change this lines according to your own time zone.
+          export TZ="Europe/Rome"
 
       - name: Add timestamp to Dockerfile
         run: |
@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit and push it HuggingFace
         run: |
-          git config --global user.name "🔥 Latte HF Rebuilder 🔥"
-          git config --global user.email "GitLatte@github.com"
+          git config --global user.name "🔥 Offa HF Rebuilder 🔥"
+          git config --global user.email "GitOffa@github.com"
           git add Dockerfile
           git commit -m "♻️ Success rebuild to HuggingFace space $NOWDATE"
           git push -f https://oauth2:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/${{ secrets.HF_SPACE_NAME }} main
