@@ -1,8 +1,8 @@
 ---
 title: Saddy
-emoji: 🏃
-colorFrom: red
-colorTo: purple
+emoji: 💻
+colorFrom: pink
+colorTo: blue
 sdk: docker
 pinned: false
 ---
